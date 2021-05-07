@@ -407,8 +407,8 @@ if args.device:
 	cnt=0
 
 	connected=False
-	#logging.basicConfig(level=logging.DEBUG)
-	logging.basicConfig(level=logging.ERROR)
+	logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
+	#logging.basicConfig(level=logging.ERROR)
 	logging.debug("Debug: Starting script...")
 	pid=os.getpid()	
 	bluepypid=None

@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  temp2mqtt:
+    build: 
+      context: ../
+      dockerfile: docker/Dockerfile #dockerfile is relative to context
+    privileged: true
+    network_mode: host
+    restart: unless-stopped
+    environment:
+      MQTT_HOST: localhost
+      MQTT_TOPIC: homeassistant
+      MQTT_USERNAME: 
+      MQTT_PASSWD:
